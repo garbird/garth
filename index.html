@@ -1,156 +1,135 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
-    />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google</title>
-    <meta
-      name="description"
-      content="Ultraviolet is a highly sophisticated proxy used for evading internet censorship or accessing websites in a controlled sandbox using the power of service-workers. Unblock sites today!"
-    />
-    <meta
-      name="keywords"
-      content="proxy, web proxy, ultraviolet, service workers, unblock websites, unblock chromebook, free web proxy, proxy list, proxy sites, un block chromebook, online proxy, proxy server, proxysite, proxy youtube, bypass securly, bypass iboss, bypass lightspeed filter, holy unblocker, chromebooks, titanium network, unblock youtube, youtube proxy, unblocked youtube, youtube unblocked"
-    />
-    <meta
-      name="theme-color"
-      media="(prefers-color-scheme: dark)"
-      content="#434c5e"
-    />
-    <meta name="googlebot" content="index, follow, snippet" />
-    <link rel="shortcut icon" href="img/googlecircle.png" />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" href="img/googlecircle.png">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        /* CSS for the navigation bar */
+        #topnav {
+            background-color: rgba(183, 0, 255, 0.507); /* Translucent background color */
+            padding: 10px 20px; /* Padding for top and bottom */
+            text-align: center; /* Center the content horizontally */
+            border-radius: 20px; /* Rounded corners */
+            width: 55%; /* Width of the navigation bar */
+            margin: 0 auto; /* Center the navigation bar */
+        }
+
+        #topnav .logo-container {
+            display: inline-block; /* Make the container behave like a block */
+            margin-right: 20px; /* Margin for the container on the right side */
+        }
+
+        #topnav .logo {
+            display: inline-block; /* Make the logo behave like a block */
+            vertical-align: middle; /* Align the logo vertically with the text */
+        }
+
+        #topnav .logo img {
+            height: 40px; /* Set the height of the logo */
+            width: auto; /* Maintain aspect ratio */
+        }
+
+        #topnav .logo-text {
+            display: inline-block; /* Make the text behave like a block */
+            vertical-align: middle; /* Align the text vertically with the logo */
+            color: white; /* Text color */
+            font-weight: bold; /* Bold font */
+            margin-left: 10px; /* Margin between logo and text */
+        }
+
+        #topnav a {
+            color: white; /* Text color */
+            text-decoration: none; /* Remove underline from links */
+            padding: 10px 20px; /* Padding for left and right */
+            margin: 0 10px; /* Margin between links */
+            display: inline-block; /* Make links behave like blocks */
+        }
+
+        #topnav a:hover {
+            background-color: rgba(139, 13, 223, 0.397); /* Background color when hovered */
+        }
+
+        #uv-form {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+
+#uv-address {
+    width: 50%;
+    height:70px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid #f709ffb0;
+    border-radius: 8px;
+    background-color: #b700ff4f;
+    color: #fff;
+
+}
+
+#uv-address:hover {
+    width: 50%;
+    height:70px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid #f709ffb0;
+    border-radius: 8px;
+    background-color: #b700ff17;
+    color: #fff;
+    
+
+}
+
+
+  
+    </style>
+</head>
+<body>
+    <nav id="topnav">
+        <div class="logo-container">
+            <div class="logo">
+                <img src="assets/img/purpleskull.png" alt="Logo">
+            </div>
+           
+        </div>
+        <a href="/index.html">Home</a>
+        <a href="/games">Games</a>
+        <a href="/apps">Apps</a>
+        <a href="/settings">Settings</a>
+    </nav>
+
+    <span class="container"></span>
+
+    <form id="uv-form" class="flex-center">
+        <input
+          id="uv-search-engine"
+          value="https://www.google.com/search?q=%s"
+          type="hidden"
+        />
+        <input id="uv-address" type="text" placeholder="Type URL or search query" />
+      </form>
+      <div class="desc left-margin">
+        <p id="uv-error"></p>
+        <pre id="uv-error-code"></pre>
+      </div>
+
+     
       <script src="/static/uv/uv.bundle.js" defer></script>
           <script src="/static/uv/uv.config.js" defer></script>
           <script src="/static/register-sw.js" defer></script>
           <script src="/static/search.js" defer></script>
+          <script src="/static/index.js" defer></script>
           <script src="/static/error.js" defer></script>
-    <script src="index.js" defer></script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What is Ultraviolet (Web Proxy)?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Highly sophisticated proxy used for evading internet censorship or accessing websites in a controlled sandbox using the power of service-workers and more!"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How do I unblock sites using Ultraviolet?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Simply head to an official site featuring Ultraviolet such as Holy Unblocker or Incognito! You can also self-host Ultraviolet on your own web server for maximum privacy."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What if Ultraviolet is blocked or not working?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Join the Titanium Network Discord at discord.gg/unblock!"
-            }
-          }
-        ]
-      }
-    </script>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        margin: 0;
-        padding: 0;
-      }
 
-      .logo-wrapper {
-        margin-top: 15%;
-      }
+          
 
-      .logo {
-        width: 272px;
-        height: 92px;
-      }
+    
 
-      #uv-form {
-        margin-top: 20px;
-      }
 
-      #uv-address {
-        width: 100%;
-        padding: 10px;
-        font-size: 16px;
-      }
-
-      .desc {
-        margin-top: 20px;
-      }
-
-      footer {
-        margin-top: 40px;
-        font-size: 14px;
-      }
-
-      footer a {
-        margin: 0 10px;
-      }
-
-      footer div {
-        margin-top: 10px;
-      }
-    </style>
-  </head>
-
-  <body>
-    <div class="logo-wrapper">
-      <img
-        class="logo"
-        src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
-        alt="Google Logo"
-      />
-    </div>
-
-    <form id="uv-form">
-      <input
-        id="uv-search-engine"
-        value="https://www.google.com/search?q=%s"
-        type="hidden"
-      />
-      <input
-        id="uv-address"
-        type="text"
-        placeholder="Search the web freely"
-      />
-    </form>
-
-    <div class="desc">
-      <p id="uv-error"></p>
-      <pre id="uv-error-code"></pre>
-    </div>
-
-    <footer>
-      <div>
-        <a
-          title="The TitaniumNetwork Discord"
-          href="https://discord.gg/unblock"
-          >Discord</a
-        >
-        <a
-          title="The official deployment repository for Ultraviolet"
-          href="https://github.com/titaniumnetwork-dev/Ultraviolet-App"
-          >GitHub</a
-        >
-        <a title="License information" href="credits.html">Credits</a>
-      </div>
-      <div>
-        <span>Google &copy; 2024</span>
-      </div>
-    </footer>
-  </body>
+</body>
 </html>
